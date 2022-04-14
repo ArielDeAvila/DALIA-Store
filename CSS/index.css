@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    position: relative;
 }
 
 .Main-header{
@@ -7,26 +8,15 @@ body{
     height: 350px;
     background: linear-gradient(RGB(252,228,236),rgba(252,228,236,0));
     mix-blend-mode: normal;
-}
-
-.Main-content{
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 38.5%;
-
-    background: #FFFFFF;
-    border-radius: 34px;
+   
 }
 
 .Logo{
     position: absolute;
     width: 223px;
     height: 95px;
-    left: 5%;
-    top: 39px;
+    left: 3%;
+    top: 3%;
 }
 
 /*Configuración de la barra de navegación*/
@@ -38,6 +28,9 @@ body{
     font-family: 'Roboto', sans-serif;
     border-radius: 7px;
     overflow: hidden;
+
+    position: absolute;
+    top: 45%;
     
 }
 
@@ -60,6 +53,7 @@ body{
     padding: 0;
     margin: 0;
 }
+
 
 #toggler,
 .navbar label {
@@ -97,13 +91,13 @@ body{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        
-        width: 25px;
 
         position: absolute;
         top: 5%;
         right: 5%;
         padding: 5px;
+
+        z-index: 2;
       
     }
 
@@ -134,8 +128,25 @@ body{
     }
 
     #toggler:checked~.menu {
-        max-height: 100%;
+        max-height: 100%; 
     }
+
+}
+/*FIN BARRA DE NAVEGACIÓN*/
+
+
+/*Diseño del contenido principal*/
+.Main-content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    top: calc(45% + 47px);
+   
+
+    background: #FFFFFF;
+    border-radius: 34px;
 }
 
 .filter{
@@ -146,5 +157,86 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+@media screen and (max-width: 710px){
+    .Main-content{
+        top: 35%;
+    }
+}
 
 
+/*FINAL DEL CONTENIDO PRICIPAL*/
+
+/*Diseño del footer*/
+.footer{
+    position: absolute;
+    top: 200px;
+    height: 250px;
+    width: 100%;
+    background-color: #0a0a0a;
+    color: #fff;
+    z-index: -1;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 550;    
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.spacing-footer{
+    height: 50px;
+}
+
+.footer-content{
+    padding: 15px;
+
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.suscribirse{
+    width: 351px;
+    height: 30px;
+    padding: 0;
+    float: left;
+    display: inline;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.button-subscribe{
+    width: 30%;
+    margin: 0;
+    height: 20px;
+    padding: 5px;
+    display: inline-block;
+    background-color: rgb(215, 50, 99);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.text-box{
+    background-color: rgb(243, 243, 243);
+    color: rgb(207, 207, 207);
+    height: 20px;
+    width: 60%;
+    margin: 0;
+    display: inline-block;
+    padding: 5px;
+    cursor: text;
+}
+
+.footer div img{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.redes{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*FINAL DISEÑO FOOTER*/
