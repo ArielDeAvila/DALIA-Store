@@ -7,23 +7,33 @@
     <title>Dalia | moda y estilo</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="shortcut icon" href="IMG/dalia.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 </head>
 <body>
     <header class="Main-header">
         <img src="IMG/Logo.svg" alt="Logo" class="Logo">
     </header>
-    <nav class="Main-nav-bar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/Mujeres.html">Mujeres</a></li>
-            <li><a href="pages/Hombes.html">Hombres</a></li>
-            <li><a href="pages/Niña.html">Niña</a></li>
-            <li><a href="pages/Niño.html">Niño</a></li>
-            <li class="other-options"><a href="pages/carrito.html" class="car"><img src="IMG/Carrito.svg" alt="carrito de compra" width="25px" height="25px"></a></li>
-            <li class="other-options"><a href="pages/ayuda.html">Ayuda/PQR</a></li>
-            <li class="other-options"><a href="pages/nosotros.html">Nosotros</a></li>
-            
-        </ul>
+    <nav class="navbar container">
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="tag"><i class="ri-menu-line"></i></label>
+        <div class="menu">
+            <div>
+                <ul class="list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/Mujeres.html">Mujeres</a></li>
+                    <li><a href="pages/Hombes.html">Hombres</a></li>
+                    <li><a href="pages/Niña.html">Niña</a></li>
+                    <li><a href="pages/Niño.html">Niño</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="list">
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="pages/ayuda.html">Ayuda/PQR</a></li>
+                    <li><a href="pages/carrito.html" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
        
     <div class="Main-content">

@@ -1,4 +1,6 @@
-body{margin: 0px;}
+body{
+    margin: 0px;
+}
 
 .Main-header{
     width: 100%;
@@ -8,6 +10,7 @@ body{margin: 0px;}
 }
 
 .Main-content{
+    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,47 +29,113 @@ body{margin: 0px;}
     top: 39px;
 }
 
-.Main-nav-bar{
-    position:absolute;
-    top: 200px;
-    left: 5%;
+/*Configuración de la barra de navegación*/
+.container {
     width: 90%;
+    margin-left: 5%;
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 7px;
+    overflow: hidden;
     
 }
 
-.Main-nav-bar ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #0A0A0A;
-    border-radius: 7px;
-}
 
-
-.Main-nav-bar li {
-    float: left;
-}
-
-.Main-nav-bar .other-options{
-    float: right;
-}
-
-.Main-nav-bar .other-options .car{
-    padding: 11px 16px;
-}
-  
-.Main-nav-bar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
+.navbar a {
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    color: inherit;
+    padding: 15px;
 }
-  
-.Main-nav-bar li:hover {
-    background-color: #333333;
+
+.navbar a:hover {
+    background-color: #333;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    padding: 0;
+    margin: 0;
+}
+
+#toggler,
+.navbar label {
+    display: none;
+}
+
+.carrito{
+    display: none;
+}
+
+.container div{
+    display: flex;
+}
+
+.menu{
+    justify-content: space-between;
+    
+}
+
+.car {
+    display: flex;
+    align-items: center;
+    padding: 11px 15px !important;
+}
+
+.car img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+@media screen and (max-width: 710px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+        width: 25px;
+
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        padding: 5px;
+      
+    }
+
+
+    .carrito{
+        display: inline;
+    }
+
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked~.menu {
+        max-height: 100%;
+    }
 }
 
 .filter{
