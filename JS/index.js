@@ -1,3 +1,17 @@
+function heightProduct() {
+    let height = document.getElementById('content-products');
+    let styleHeight = window.getComputedStyle(height);
+    let porpertyHeight = styleHeight.getPropertyValue('height');
+
+    console.log(porpertyHeight);
+
+    document.getElementById('main-content').style.height = 'calc(' + porpertyHeight +' + 250px)';
+
+
+}
+
+heightProduct()
+
 function topFooter() {
 
     let altura = document.getElementById('main-content');
@@ -15,3 +29,4 @@ function topFooter() {
 }
 
 topFooter();
+

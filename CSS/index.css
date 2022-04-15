@@ -137,24 +137,110 @@ body{
 
 /*Diseño del contenido principal*/
 .Main-content {
-    display: block;
     position: absolute;
     width: 100%;
     height: auto;
+    padding-top: 15px;
     left: 0px;
     top: calc(45% + 47px);
    
 
     background: #FFFFFF;
     border-radius: 34px;
+
+    display: flex;
+    justify-content: flex-start;
 }
 
 .filter{
-    width: 15%;
+    width: 20%;
     color: gray;
     padding: 50px;
     padding-top: 25px;
     font-family: 'Roboto', sans-serif;
+}
+
+.filter p{
+    margin: 0;
+}
+
+.content-products{
+    width: 80%;
+    height: auto;
+    padding-top: 25px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 2%;
+
+}
+
+.product{
+    padding: 14px;
+    height: 250px;
+    width: 150px;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.picture-product{
+    width: 100%;
+    height: 60%;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details{
+    height: 40%;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.details strong, .details p{
+    margin: 0;
+    padding: 0;
+}
+
+.details p{
+    color: rgb(168, 167, 167);
+}
+
+
+
+.picture-product p{
+    margin: 0;
+    padding: 0;
+}
+
+.buy{
+    padding-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.buy p{
+    color: rgb(215, 50, 99);
+    font-weight: bold;
+}
+
+.product-car{
+    padding: 2px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    width: 25px;
+    cursor: pointer;
+    box-shadow: -1px 1px 2px gainsboro;
+    
+
 }
 
 @media screen and (max-width: 710px){
@@ -163,6 +249,23 @@ body{
     }
 }
 
+@media screen and (max-width: 962px) {
+    .content-products{
+        grid-template-columns: auto;
+        row-gap: 1%;
+    }
+    .product{
+        width: 87%;
+        height: 100px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+
+    }
+    .product .picture-product{
+        width: 30%;
+    }
+}
 
 /*FINAL DEL CONTENIDO PRICIPAL*/
 
@@ -170,7 +273,7 @@ body{
 .footer{
     position: absolute;
     top: 200px;
-    height: 250px;
+    height: auto;
     width: 100%;
     background-color: #0a0a0a;
     color: #fff;
@@ -221,6 +324,7 @@ body{
     height: 20px;
     width: 60%;
     margin: 0;
+    font-weight: lighter;
     display: inline-block;
     padding: 5px;
     cursor: text;
