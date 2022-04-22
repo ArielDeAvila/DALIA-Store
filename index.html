@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="shortcut icon" href="IMG/dalia.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <script src="JS/jquery-3.6.0.js"></script>
+    
+    
 </head>
 
 <body>
@@ -21,188 +24,25 @@
         <div class="menu">
             <div>
                 <ul class="list">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/Mujeres.html">Mujeres</a></li>
-                    <li><a href="pages/Hombes.html">Hombres</a></li>
-                    <li><a href="pages/Niña.html">Niña</a></li>
-                    <li><a href="pages/Niño.html">Niño</a></li>
+                    <li><a href="#" onclick="activador('Pages/home.html','main-content')">Inicio</a></li>
+                    <li><a href="#" onclick="activador('pages/Mujeres.html','main-content')">Mujeres</a></li>
+                    <li><a href="#" onclick="activador('pages/Hombes.html','main-content')">Hombres</a></li>
+                    <li><a href="#" onclick="activador('pages/Niña.html','main-content')">Niña</a></li>
+                    <li><a href="#" onclick="activador('pages/Niño.html','main-content')">Niño</a></li>
                 </ul>
             </div>
             <div>
                 <ul class="list">
-                    <li><a href="pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="pages/ayuda.html">Ayuda/PQR</a></li>
-                    <li><a href="pages/carrito.html" class="car"><span class="carrito">Carrito</span><img
-                                src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
+                    <li><a href="#" onclick="activador('pages/nosotros.html','main-content')">Nosotros</a></li>
+                    <li><a href="#" onclick="activador('pages/ayuda.html','main-content')">Ayuda/PQR</a></li>
+                    <li><a href="#" onclick="activador('pages/carrito.html','main-content')" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="Main-content" id="main-content">
-        <aside class="filter">
-            <p>Filtro</p>
-            <hr>
 
-        </aside>
-        <div class="content-products" id="content-products">
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <div class="picture-product">
-                    <p>Imagen</p>
-                </div>
-                <div class="details">
-                    <strong>Nombre del producto</strong>
-                    <p class="description-product">Breve descripción del producto</p>
-                    <div class="buy">
-                        <p>$120.000,00</p>
-                        <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer class="footer" id="footer">
@@ -235,6 +75,6 @@
     </footer>
 
 </body>
-<script src="JS/index.js"></script>
+<script src="JS/main.js" onload="activador('Pages/home.html','main-content')"></script>
 
 </html>

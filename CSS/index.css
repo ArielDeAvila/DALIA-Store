@@ -88,48 +88,10 @@ body{
 
 @media screen and (max-width: 710px) {
     .container{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        padding: 5px;
-
-        z-index: 2;
+        display: none;
       
     }
-
-
-    .carrito{
-        display: inline;
-    }
-
-    .menu {
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-
-    .list {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .navbar label {
-        display: inline-flex;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    #toggler:checked~.menu {
-        max-height: 100%; 
-    }
+    
 
 }
 /*FIN BARRA DE NAVEGACIÓN*/
@@ -148,14 +110,14 @@ body{
     background: #FFFFFF;
     border-radius: 34px;
 
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 15% 85%;
 }
 
 .filter{
-    width: 20%;
+    
     color: gray;
-    padding: 50px;
+    padding: 0px 1.5vw;
     padding-top: 25px;
     font-family: 'Roboto', sans-serif;
 }
@@ -165,12 +127,12 @@ body{
 }
 
 .content-products{
-    width: 80%;
+    
     height: auto;
+    padding: 0 1vw;
     padding-top: 25px;
-
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     row-gap: 2%;
 
 }
@@ -250,12 +212,18 @@ body{
 }
 
 @media screen and (max-width: 962px) {
-    .content-products{
+    .Main-content{
         grid-template-columns: auto;
+        padding: 5%;
+
+        box-sizing: border-box;
+    }
+    .content-products{
+        grid-template-columns: auto !important;
         row-gap: 1%;
     }
     .product{
-        width: 87%;
+        width: 95%;
         height: 100px;
         display: grid;
         grid-template-columns: auto auto;
@@ -264,6 +232,13 @@ body{
     }
     .product .picture-product{
         width: 30%;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .content-products{
+        grid-template-columns: auto auto auto;
+
     }
 }
 

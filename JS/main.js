@@ -1,16 +1,10 @@
-function heightProduct() {
-    let height = document.getElementById('content-products');
-    let styleHeight = window.getComputedStyle(height);
-    let porpertyHeight = styleHeight.getPropertyValue('height');
-
-    console.log(porpertyHeight);
-
-    document.getElementById('main-content').style.height = 'calc(' + porpertyHeight +' + 250px)';
-
-
+function abrirUrl(url, contenedor) {
+    $.get(url, {}, function (data) {
+        $("#" + contenedor).html(data);
+    });
 }
 
-heightProduct();
+
 
 function topFooter() {
 
@@ -18,15 +12,22 @@ function topFooter() {
     let elementStyleAl = window.getComputedStyle(altura);
     let elementAltura = elementStyleAl.getPropertyValue('height');
 
+    console.log(elementAltura);
+
     let top = document.getElementById('main-content');
     let elementStyleTop = window.getComputedStyle(top);
     let elementTop = elementStyleTop.getPropertyValue('top');
 
 
     document.getElementById('footer').style.top = 'calc(' + elementAltura + ' + ' + elementTop + ' - 50px)';
-    
+
 
 }
 
-topFooter();
+function activador(url, contenedor) {
+    abrirUrl(url, contenedor);
+    
 
+
+    
+}
