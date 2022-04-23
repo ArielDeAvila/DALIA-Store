@@ -2,11 +2,14 @@ function abrirUrl(url, contenedor) {
     $.get(url, {}, function (data) {
         $("#" + contenedor).html(data);
     });
+
+   
 }
 
 
 
 function topFooter() {
+    
 
     let altura = document.getElementById('main-content');
     let elementStyleAl = window.getComputedStyle(altura);
@@ -25,9 +28,20 @@ function topFooter() {
 }
 
 function activador(url, contenedor) {
+    
     abrirUrl(url, contenedor);
+
+    topFooter();
     
+}
 
 
-    
+
+function bucle(name) {
+    let div = document.getElementById(name);
+
+    for (var i = 1; i <= 15; i++){
+        div.innerHTML += `<product-component></product-component>`
+        
+    }
 }

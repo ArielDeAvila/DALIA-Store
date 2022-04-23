@@ -1,28 +1,24 @@
-class ListComponent extends HTMLElement{
-
+class products extends HTMLElement{
     constructor() {
         super();
-
-        const shadow = this.attachShadow({ mode: 'open' });
-
-        this.divConteiner = document.createElement('div');
-        this.divContent = document.createElement('h1');
-
-        this.divConteiner.appendChild(this.divContent);
-
-        this.divConteiner.innerHTML = "hola";
-
-        shadow.appendChild(this.divConteiner);
-        shadow.appendChild(this.divContent);
-
-
+        this.render();
     }
 
+    render() {
+        this.innerHTML = `<div class="product">
+            <div class="picture-product">
+                <p>Imagen</p>
+            </div>
+            <div class="details">
+                <strong>Nombre del producto</strong>
+                <p class="description-product">Breve descripción del producto</p>
+                <div class="buy">
+                    <p>$120.000,00</p>
+                    <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
+                </div>
+            </div>
+        </div>`
+    }
 }
 
-customElements.define("product-contenier", ListComponent);
-
-let element = document.getElementById('content-products');
-let hijos = document.createElement('product-contenier')
-
-element.appendChild(hijos);
+customElements.define("product-component", products);
