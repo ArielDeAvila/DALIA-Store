@@ -18,10 +18,22 @@
 <body>
     <header class="Main-header">
         <img src="IMG/Logo.svg" alt="Logo" class="Logo">
+        <label class="tag"><i class="ri-menu-line"></i></label>
     </header>
-    <nav class="navbar container">
-        <input type="checkbox" id="toggler">
-        <label for="toggler" class="tag"><i class="ri-menu-line"></i></label>
+    <div class="menu-hide">
+        <label class="tag"><i class="ri-menu-line"></i></label>
+        <ul class="list">
+            <li><a href="#" onclick="activador('Pages/home.html','main-content')">Inicio</a></li>
+            <li><a href="#" onclick="activador('pages/Mujeres.html','main-content')">Mujeres</a></li>
+            <li><a href="#" onclick="activador('pages/Hombes.html','main-content')">Hombres</a></li>
+            <li><a href="#" onclick="activador('pages/Niña.html','main-content')">Niña</a></li>
+            <li><a href="#" onclick="activador('pages/Niño.html','main-content')">Niño</a></li>
+            <li><a href="#" onclick="activador('pages/nosotros.html','main-content')">Nosotros</a></li>
+            <li><a href="#" onclick="activador('pages/ayuda.html','main-content')">Ayuda/PQR</a></li>
+            <li><a href="#" onclick="activador('pages/carrito.html','main-content')" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
+        </ul>
+    </div>
+    <nav class="navbar container">       
         <div class="menu">
             <div>
                 <ul class="list">
@@ -49,22 +61,24 @@
     <footer class="footer" id="footer">
         <div class="spacing-footer"></div>
         <div class="footer-content">
-            <div>
-                <p>Siguenos en nuestras redes sociales:</p>
-                <div class="redes">
-                    <div><img src="img/facebook.png" alt="facebook" title="facebook"></div>
-                    <div><img src="img/instagram.png" alt="instagram" title="instagram"></div>
-                    <div><img src="img/twitter.png" alt="twitter" title="twitter"></div>
+            <div class="footer-redes">
+                <div>
+                    <p>Siguenos en nuestras redes sociales:</p>
+                    <div class="redes">
+                        <div><img src="img/facebook.png" alt="facebook" title="facebook"></div>
+                        <div><img src="img/instagram.png" alt="instagram" title="instagram"></div>
+                        <div><img src="img/twitter.png" alt="twitter" title="twitter"></div>
+                    </div>
+                </div>
+                <div>
+                    <p>Contactanos por:</p>
+                    <div class="redes">
+                        <div><img src="img/whatsapp.png" alt="whatsapp" title="whatsapp"></div>
+                        <div><img src="img/telegrama.png" alt="telegram" title="telegram"></div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <p>Contactanos por:</p>
-                <div class="redes">
-                    <div><img src="img/whatsapp.png" alt="whatsapp" title="whatsapp"></div>
-                    <div><img src="img/telegrama.png" alt="telegram" title="telegram"></div>
-                </div>
-            </div>
-            <div>
+            <div class="div-subscribe">
                 <p>Suscríbete y enterate de nuestras ofertas</p>
                 <div class="suscribirse">
                     <div class="text-box">Ingresa tu correo</div>

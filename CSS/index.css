@@ -54,12 +54,6 @@ body{
     margin: 0;
 }
 
-
-#toggler,
-.navbar label {
-    display: none;
-}
-
 .carrito{
     display: none;
 }
@@ -84,14 +78,76 @@ body{
     height: 25px;
 }
 
+.tag{
+    display: none;
+}
 
+.menu-hide{
+    display: none;
+}
 
 @media screen and (max-width: 710px) {
     .container{
         display: none;
       
     }
-    
+    .tag{
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        font-size: 3em;
+        font-weight: bold;
+        
+    }
+
+    .menu-hide{
+        display: block;
+        z-index: 3;
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+        text-align: center;
+        overflow-y: scroll;
+        
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .menu-hide .tag{
+        text-align: right;
+        position: static;
+        padding: 5%;
+        padding-bottom: 0;
+    }
+
+    .menu-hide .list{
+        display: block ;
+    }
+
+    .menu-hide a{
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.5em;
+    }
+
+    .list li{
+        padding: 5% 0;
+    }
+
+    .carrito{
+        display: inline-block;
+    }
+
+    .car{
+        padding: 0;
+        text-align: center;
+        display: block;
+    }
 
 }
 /*FIN BARRA DE NAVEGACIÓN*/
@@ -101,7 +157,7 @@ body{
 .Main-content {
     position: absolute;
     width: 100%;
-    height: auto;
+    
     padding-top: 15px;
     left: 0px;
     top: calc(45% + 47px);
@@ -128,7 +184,7 @@ body{
 
 .content-products{
     
-    height: auto;
+    
     padding: 0 1vw;
     padding-top: 25px;
     display: grid;
@@ -212,6 +268,14 @@ body{
 }
 
 @media screen and (max-width: 962px) {
+    .filter{
+        padding: 0;
+    }
+
+    .filter p{
+        text-align: right;
+    }
+
     .Main-content{
         grid-template-columns: auto;
         padding: 5%;
@@ -265,7 +329,7 @@ body{
 }
 
 .footer-content{
-    padding: 15px;
+    padding: 15px 0;
 
 
     display: flex;
@@ -315,6 +379,26 @@ body{
     padding: 5px;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:710px) {
+    .footer{
+        
+        display: grid;
+        grid-template-rows: auto auto;
+
+    }
+
+    .footer-content{
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+    .footer .footer-redes{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
 }
 
 
