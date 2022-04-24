@@ -18,10 +18,10 @@
 <body>
     <header class="Main-header">
         <img src="IMG/Logo.svg" alt="Logo" class="Logo">
-        <label class="tag"><i class="ri-menu-line"></i></label>
+        <label class="tag" onclick="menu_open()"><i class="ri-menu-line" ></i></label>
     </header>
-    <div class="menu-hide">
-        <label class="tag"><i class="ri-menu-line"></i></label>
+    <div class="menu-hide" id="menu-hide">
+        <label class="tag" onclick="menu_close()"><i class="ri-menu-line"></i></label>
         <ul class="list">
             <li><a href="#" onclick="activador('Pages/home.html','main-content')">Inicio</a></li>
             <li><a href="#" onclick="activador('pages/Mujeres.html','main-content')">Mujeres</a></li>

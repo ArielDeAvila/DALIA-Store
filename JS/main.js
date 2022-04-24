@@ -45,3 +45,11 @@ function bucle(name) {
         
     }
 }
+
+function menu_close() {
+    document.getElementById("menu-hide").style.display = "none";
+}
+
+function menu_open() {
+    document.getElementById("menu-hide").style.display = "block";
+}

@@ -102,7 +102,7 @@ body{
     }
 
     .menu-hide{
-        display: block;
+        display: none;
         z-index: 3;
         width: 100%;
         height: auto;
