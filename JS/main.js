@@ -30,9 +30,8 @@ function topFooter() {
 function activador(url, contenedor) {
     
     abrirUrl(url, contenedor);
-
-    topFooter();
     
+    topFooter();
 }
 
 
