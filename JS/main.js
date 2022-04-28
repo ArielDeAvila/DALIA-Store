@@ -10,6 +10,7 @@ function abrirUrl(url, contenedor) {
 
 function topFooter() {
     
+    
 
     let altura = document.getElementById('main-content');
     let elementStyleAl = window.getComputedStyle(altura);
