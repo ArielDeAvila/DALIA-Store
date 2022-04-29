@@ -14,7 +14,7 @@ class products extends HTMLElement{
                 <p class="description-product">Breve descripción del producto</p>
                 <div class="buy">
                     <p>$120.000,00</p>
-                    <img src="img/Carrito.svg" alt="agregar al carrito" class="product-car">
+                    <img src="IMG/Carrito.svg" alt="agregar al carrito" class="product-car">
                 </div>
             </div>
         </div>`
