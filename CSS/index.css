@@ -156,16 +156,14 @@ body{
 /*Diseño del contenido principal*/
 .Main-content {
     position: absolute;
-    width: 100%;
-    height: auto;
-    
-    padding-top: 15px;
-    
-    left: 0px;
     top: calc(45% + 47px);
-   
-    overflow: hidden;
-    background: #FFFFFF;
+    left: 0px;
+    right: 0;
+
+    width: 100%;
+    padding-top: 15px;
+
+    background-color: #FFFFFF;
     border-radius: 34px;
 
     display: grid;
@@ -192,7 +190,8 @@ body{
     padding-top: 25px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-    gap: 5%;
+    gap: 15px;
+    padding-bottom: 5%;
 
 }
 
@@ -288,7 +287,8 @@ body{
     .content-products{
         
         grid-template-columns: auto !important;
-        row-gap: 1%;
+        row-gap: 15px;
+        padding-bottom: 0;
     }
     .product{
         width: 100%;

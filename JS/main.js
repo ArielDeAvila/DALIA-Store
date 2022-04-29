@@ -40,7 +40,7 @@ function activador(url, contenedor) {
 function bucle(name) {
     let div = document.getElementById(name);
 
-    for (var i = 1; i <= 15; i++){
+    for (var i = 1; i <= 28; i++){
         div.innerHTML += `<product-component></product-component>`
         
     }
