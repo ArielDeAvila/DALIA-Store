@@ -46,10 +46,17 @@ function bucle(name) {
     }
 }
 
+function disableScroll() {
+    window.scrollTo(0, 0);
+}
+
 function menu_close() {
     document.getElementById("menu-hide").style.display = "none";
+    window.removeEventListener('scroll', disableScroll); 
+    
 }
 
 function menu_open() {
     document.getElementById("menu-hide").style.display = "block";
+    window.addEventListener('scroll', disableScroll);
 }

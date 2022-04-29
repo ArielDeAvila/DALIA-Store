@@ -170,6 +170,11 @@ body{
     grid-template-columns: 15% 85%;
 }
 
+.Main-content h1{
+    margin-bottom: 0;
+    
+}
+
 .filter{
     
     color: gray;
@@ -185,11 +190,11 @@ body{
 .content-products{
     
     height: auto;
-    padding: 0 1vw;
+   
     padding-right: 7%;
     padding-top: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
     gap: 15px;
     padding-bottom: 5%;
 
@@ -269,7 +274,7 @@ body{
     }
 }
 
-@media screen and (max-width: 962px) {
+@media screen and (max-width: 755px) {
     .filter{
         padding: 0;
     }
