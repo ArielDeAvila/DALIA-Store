@@ -108,14 +108,9 @@ body{
         height: 100%;
         background-color: #FFFFFF;
         text-align: center;
-        
-        
-
+        overflow-y: scroll;
         position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        
     }
 
     .menu-hide .tag{
@@ -185,6 +180,51 @@ body{
 
 .filter p{
     margin: 0;
+}
+
+.filter-box{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#toggler,
+.list-price{
+    display: none;
+}
+
+#toggler:checked ~ .list-price{
+    display: block;
+}
+
+.filter-price,
+.filter-mark,
+.filter-wear{
+    list-style-type: none;
+    padding-left: 10%;
+    margin-top: 8%;
+}
+
+#toggler-mark,
+.list-mark{
+    display: none;
+}
+
+#toggler-mark:checked~.list-mark {
+    display: block;
+}
+
+#toggler-wear,
+.list-wear {
+    display: none;
+}
+
+#toggler-wear:checked~.list-wear {
+    display: block;
+}
+
+#toggler-filtro{
+    display: none;
 }
 
 .content-products{
@@ -283,6 +323,20 @@ body{
         text-align: right;
     }
 
+    .filter-price,
+    .filter-mark,
+    .filter-wear {
+        margin: auto;
+    }
+
+    .filter-box{
+        display: none;
+    }
+
+    #toggler-filtro:checked~ .filter-box{
+        display: block;
+    }
+
     .Main-content{
         grid-template-columns: auto;
         padding: 5%;
@@ -294,6 +348,7 @@ body{
         
         grid-template-columns: auto !important;
         row-gap: 15px;
+        padding-top: 0;
         padding-bottom: 0;
     }
     .product{
