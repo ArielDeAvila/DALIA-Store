@@ -6,17 +6,11 @@ function abrirUrl(url, contenedor) {
    
 }
 
-
-
 function topFooter() {
     
-    
-
     let altura = document.getElementById('main-content');
     let elementStyleAl = window.getComputedStyle(altura);
     let elementAltura = elementStyleAl.getPropertyValue('height');
-
-    console.log(elementAltura);
 
     let top = document.getElementById('main-content');
     let elementStyleTop = window.getComputedStyle(top);
@@ -35,16 +29,27 @@ function activador(url, contenedor) {
     topFooter();
 }
 
-
-
-function bucle(name) {
+function bucle(name) { 
     let div = document.getElementById(name);
-
-    for (var i = 1; i <= 28; i++){
-        div.innerHTML += `<product-component></product-component>`
+    fetch('https://fakestoreapi.com/products/')
+    .then(res => res.json())
+    .then(json => { 
+        console.log(json);
+        console.log(json.length);
         
-    }
+
+        for (var i = 0; i <= json.length; i++) {
+            div.innerHTML += `<product-component
+                title = "${json[i].title}"
+                description = "${json[i].description}" 
+                price = "${json[i].price}"
+                src = "${json[i].image}"
+                ></product-component>`
+
+        }
+    })
 }
+
 
 function disableScroll() {
     window.scrollTo(0, 0);

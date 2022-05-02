@@ -1,22 +1,27 @@
 class products extends HTMLElement{
     constructor() {
         super();
+        this.title = this.getAttribute("title");
+        this.description = this.getAttribute("description");
+        this.src = this.getAttribute("src");
+        this.price = this.getAttribute("price");
         this.render();
     }
 
     render() {
-        this.innerHTML = `<div class="product">
+        this.innerHTML = 
+        `<div class="product">
             <div class="picture-product">
-                <p>Imagen</p>
+                <img src="${this.src}" alt="producto" title="producto">
             </div>
             <div class="details">
-                <strong>Nombre del producto</strong>
-                <p class="description-product">Breve descripción del producto</p>
-                <div class="buy">
-                    <p>$120.000,00</p>
+                <strong>${this.title}</strong>
+                <p class="description-product">${this.description}</p>
+            </div>
+            <div class="buy">
+                    <p>$${this.price}</p>
                     <img src="IMG/Carrito.svg" alt="agregar al carrito" class="product-car">
                 </div>
-            </div>
         </div>`
     }
 }
