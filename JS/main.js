@@ -37,16 +37,15 @@ function bucle(name) {
         console.log(json);
         console.log(json.length);
         
-
-        for (var i = 0; i <= json.length; i++) {
+        json.forEach(element => {
             div.innerHTML += `<product-component
-                title = "${json[i].title}"
-                description = "${json[i].description}" 
-                price = "${json[i].price}"
-                src = "${json[i].image}"
+                title = "${element.title}"
+                description = "${element.description}" 
+                price = "${element.price}"
+                src = "${element.image}"
                 ></product-component>`
+        });
 
-        }
     })
 }
 

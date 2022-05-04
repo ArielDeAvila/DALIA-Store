@@ -16,7 +16,7 @@ class products extends HTMLElement{
             </div>
             <div class="details">
                 <strong>${this.title}</strong>
-                <p class="description-product">${this.description}</p>
+                <p>${this.description}</p>
             </div>
             <div class="buy">
                 <p>$${this.price}</p>
