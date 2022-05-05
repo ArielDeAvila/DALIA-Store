@@ -34,9 +34,7 @@ function bucle(name) {
     fetch('https://fakestoreapi.com/products/')
     .then(res => res.json())
     .then(json => { 
-        console.log(json);
-        console.log(json.length);
-        
+                
         json.forEach(element => {
             div.innerHTML += `<product-component
                 title = "${element.title}"

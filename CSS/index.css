@@ -446,7 +446,7 @@ body {
 
 .footer-redes,
 .footer-contact,
-.footer-subscribe {
+.footer-subscribe{
     padding: 5px;
 }
 
@@ -455,6 +455,10 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
 
+}
+
+.footer-subscribe form{
+    min-width: calc(335px - 5% - 5px);
 }
 
 .suscribirse {
@@ -470,24 +474,39 @@ body {
 .button-subscribe {
     width: 30%;
     margin: 0;
-    height: 20px;
+    color: #fff;
     padding: 5px;
     display: inline-block;
     background-color: rgb(215, 50, 99);
     border-radius: 0px 5px 5px 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+    font-size: 12pt;
+    border-style: none;
+    transform: translateX(-4px);
     cursor: pointer;
+    
 }
 
 .text-box {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
     background-color: rgb(243, 243, 243);
-    color: rgb(207, 207, 207);
-    height: 20px;
-    width: 60%;
+    color: rgb(141, 140, 140);
+    width: 65%;
     margin: 0;
     font-weight: lighter;
     display: inline-block;
     padding: 5px;
-    cursor: text;
+    border-style: none;
+    border-radius: 5px 0 0 5px;
+    
+}
+
+.text-box:focus-visible{
+    border-style: none;
+    outline-offset: 0;
+    outline: 0;
 }
 
 .footer img {
