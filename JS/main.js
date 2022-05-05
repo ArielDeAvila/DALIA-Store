@@ -22,14 +22,14 @@ function topFooter() {
 
 }
 
-function activador(url, contenedor) {
+function openPages(url, contenedor) {
     
     abrirUrl(url, contenedor);
     
     topFooter();
 }
 
-function bucle(name) { 
+function loadProducts(name) { 
     let div = document.getElementById(name);
     fetch('https://fakestoreapi.com/products/')
     .then(res => res.json())

@@ -458,7 +458,7 @@ body {
 }
 
 .footer-subscribe form{
-    min-width: calc(335px - 5% - 5px);
+    min-width: calc(300px - 5% - 5px);
 }
 
 .suscribirse {
@@ -517,7 +517,7 @@ body {
 
 
 
-@media screen and (max-width:710px) {
+@media screen and (max-width:755px) {
     .footer {
 
         display: grid;
