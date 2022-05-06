@@ -3,6 +3,25 @@ body {
     position: relative;
 }
 
+.sing-in-up{
+    position: absolute;
+    top: 12%;
+    right: 5%;
+
+    color:rgb(215, 50, 99);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Roboto',sans-serif;
+    font-weight: bold;
+
+}
+
+.sing-in-up a{
+    text-decoration: none;
+    color: rgb(215, 50, 99);
+
+}
+
 .Main-header {
     width: 100%;
     height: 350px;
@@ -87,6 +106,8 @@ body {
 }
 
 @media screen and (max-width: 710px) {
+    .sing-in-up{display: none;}
+
     .container {
         display: none;
 
