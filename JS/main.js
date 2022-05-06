@@ -31,6 +31,7 @@ function openPages(url, contenedor) {
 
 function loadProducts(name) { 
     let div = document.getElementById(name);
+    
     fetch('https://fakestoreapi.com/products/')
     .then(res => res.json())
     .then(json => { 
