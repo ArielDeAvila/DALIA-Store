@@ -20,6 +20,7 @@
     <nav class="menu-hide" id="menu-hide">
         <label class="tag" onclick="menu_close()"><i class="ri-menu-line"></i></label>
         <ul class="list">
+            
             <li><a href="#" onclick="openPages('Pages/home.html','main-content'),menu_close()">Inicio</a></li>
             <li><a href="#" onclick="openPages('Pages/Mujeres.html','main-content'),menu_close()">Mujeres</a></li>
             <li><a href="#" onclick="openPages('Pages/Hombes.html','main-content'),menu_close()">Hombres</a></li>
@@ -28,13 +29,16 @@
             <li><a href="#" onclick="openPages('Pages/nosotros.html','main-content'),menu_close()">Nosotros</a></li>
             <li><a href="#" onclick="openPages('Pages/ayuda.html','main-content'),menu_close()">Ayuda/PQR</a></li>
             <li><a href="#" onclick="openPages('Pages/carrito.html','main-content'),menu_close()" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
+            <li><a href="#" onclick="openPages('Pages/login.html','main-content')">Iniciar sesión</a></li>
+            <li><a href="#" onclick="openPages('Pages/Register.html','main-content'),menu_close()">Resgistarse</a></li>
+            
         </ul>
     </nav>
     <header class="Main-header">
         <img src="IMG/Logo.svg" alt="Logo" class="Logo">
         <label class="tag" onclick="menu_open()"><i class="ri-menu-line" ></i></label>
         <div class="sing-in-up">
-            <a href="#" >Resgistarse</a> | <a href="#">Iniciar sesión</a>
+            <a href="#" onclick="openPages('Pages/Register.html','main-content')">Resgistarse</a> | <a href="#" onclick="openPages('Pages/login.html','main-content')">Iniciar sesión</a>
         </div>
     </header>
     <nav class="navbar container">       
@@ -48,7 +52,7 @@
                     <li><a href="#" onclick="openPages('Pages/Niño.html','main-content')">Niño</a></li>
                 </ul>
             </div>
-            <divP
+            <div>
                 <ul class="list">
                     <li><a href="#" onclick="openPages('Pages/nosotros.html','main-content')">Nosotros</a></li>
                     <li><a href="#" onclick="openPages('Pages/ayuda.html','main-content')">Ayuda/PQR</a></li>

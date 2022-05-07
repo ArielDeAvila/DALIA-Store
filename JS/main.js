@@ -19,14 +19,14 @@ function topFooter() {
 
     document.getElementById('footer').style.top = 'calc(' + elementAltura + ' + ' + elementTop + ' - 50px)';
 
-
 }
 
 function openPages(url, contenedor) {
-    
+
     abrirUrl(url, contenedor);
+
+    document.getElementById("main-content").style.display = 'grid';
     
-    topFooter();
 }
 
 function loadProducts(name) { 
@@ -46,6 +46,7 @@ function loadProducts(name) {
         });
 
     })
+
 }
 
 

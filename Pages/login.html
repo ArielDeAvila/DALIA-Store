@@ -1,0 +1,19 @@
+<body>
+    <form class="register">
+        <h1>Inicia sesión</h1>
+        <label for="name">Correo</label>
+        <input type="text" name="name" id="name" placeholder="e-mail@example.com">
+        <label for="last-name">Contraseña</label>
+        <input type="password" name="last-name" id="last-name" placeholder="Ingresa tu contraseña">
+        <div class="show-password">
+            <input type="checkbox" id="show-password"><label for="show-password">Mostrar contraseña</label>
+        </div>
+        <input type="submit" value="Iniciar sesión">
+    </form>
+</body>
+<script>
+    $(document).ready(function () {
+        document.getElementById("main-content").style.display = 'block';
+
+    });
+</script>
