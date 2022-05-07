@@ -45,7 +45,7 @@ function loadProducts(name) {
                 ></product-component>`
         });
 
-    })
+    });
 
 }
 

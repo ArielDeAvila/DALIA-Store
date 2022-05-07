@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
     <script src="JS/jquery-3.6.0.js"></script>
     <script src="JS/componentProducts.js"></script>
-    
-    
-    
 </head>
 
 <body onresize="topFooter()" onscroll="topFooter()">
@@ -29,7 +26,7 @@
             <li><a href="#" onclick="openPages('Pages/nosotros.html','main-content'),menu_close()">Nosotros</a></li>
             <li><a href="#" onclick="openPages('Pages/ayuda.html','main-content'),menu_close()">Ayuda/PQR</a></li>
             <li><a href="#" onclick="openPages('Pages/carrito.html','main-content'),menu_close()" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
-            <li><a href="#" onclick="openPages('Pages/login.html','main-content')">Iniciar sesión</a></li>
+            <li><a href="#" onclick="openPages('Pages/login.html','main-content'),menu_close()">Iniciar sesión</a></li>
             <li><a href="#" onclick="openPages('Pages/Register.html','main-content'),menu_close()">Resgistarse</a></li>
             
         </ul>
@@ -63,7 +60,7 @@
     </nav>
 
     <div class="Main-content" id="main-content">
-
+       
     </div>
 
     <footer class="footer" id="footer">
@@ -98,5 +95,6 @@
 
 </body>
 <script src="JS/main.js" onload="openPages('Pages/home.html','main-content')"></script>
+
 
 </html>
