@@ -13,47 +13,47 @@
     <script src="JS/componentProducts.js"></script>
 </head>
 
-<body onresize="topFooter()" onscroll="topFooter()">
+<body>
     <nav class="menu-hide" id="menu-hide">
-        <label class="tag" onclick="menu_close()"><i class="ri-menu-line"></i></label>
+        <label class="tag" id="menu-close"><i class="ri-menu-line"></i></label>
         <ul class="list">
             
-            <li><a href="#" onclick="openPages('Pages/home.html','main-content'),menu_close()">Inicio</a></li>
-            <li><a href="#" onclick="openPages('Pages/Mujeres.html','main-content'),menu_close()">Mujeres</a></li>
-            <li><a href="#" onclick="openPages('Pages/Hombes.html','main-content'),menu_close()">Hombres</a></li>
-            <li><a href="#" onclick="openPages('Pages/Niña.html','main-content'),menu_close()">Niña</a></li>
-            <li><a href="#" onclick="openPages('Pages/Niño.html','main-content'),menu_close()">Niño</a></li>
-            <li><a href="#" onclick="openPages('Pages/nosotros.html','main-content'),menu_close()">Nosotros</a></li>
-            <li><a href="#" onclick="openPages('Pages/ayuda.html','main-content'),menu_close()">Ayuda/PQR</a></li>
-            <li><a href="#" onclick="openPages('Pages/carrito.html','main-content'),menu_close()" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
-            <li><a href="#" onclick="openPages('Pages/login.html','main-content'),menu_close()">Iniciar sesión</a></li>
-            <li><a href="#" onclick="openPages('Pages/Register.html','main-content'),menu_close()">Resgistarse</a></li>
+            <li><a href="#" id="inicio menu-close">Inicio</a></li>
+            <li><a href="#" id="mujeres menu-close">Mujeres</a></li>
+            <li><a href="#" id="hombres menu-close">Hombres</a></li>
+            <li><a href="#" id="girls menu-close">Niña</a></li>
+            <li><a href="#" id="boys menu-close">Niño</a></li>
+            <li><a href="#" id="nosotros menu-close">Nosotros</a></li>
+            <li><a href="#" id="help menu-close">Ayuda/PQR</a></li>
+            <li><a href="#" id="car menu-close" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
+            <li><a href="#" id="login menu-close">Iniciar sesión</a></li>
+            <li><a href="#" id="register menu-close">Resgistarse</a></li>
             
         </ul>
     </nav>
     <header class="Main-header">
         <img src="IMG/Logo.svg" alt="Logo" class="Logo">
-        <label class="tag" onclick="menu_open()"><i class="ri-menu-line" ></i></label>
+        <label class="tag" id="menu-open"><i class="ri-menu-line" ></i></label>
         <div class="sing-in-up">
-            <a href="#" onclick="openPages('Pages/Register.html','main-content')">Resgistarse</a> | <a href="#" onclick="openPages('Pages/login.html','main-content')">Iniciar sesión</a>
+            <a href="#" id="register">Resgistarse</a> | <a href="#" id="login">Iniciar sesión</a>
         </div>
     </header>
     <nav class="navbar container">       
         <div class="menu">
             <div>
                 <ul class="list">
-                    <li><a href="#" onclick="openPages('Pages/home.html','main-content')">Inicio</a></li>
-                    <li><a href="#" onclick="openPages('Pages/Mujeres.html','main-content')">Mujeres</a></li>
-                    <li><a href="#" onclick="openPages('Pages/Hombes.html','main-content')">Hombres</a></li>
-                    <li><a href="#" onclick="openPages('Pages/Niña.html','main-content')">Niña</a></li>
-                    <li><a href="#" onclick="openPages('Pages/Niño.html','main-content')">Niño</a></li>
+                    <li><a href="#" id="inicio">Inicio</a></li>
+                    <li><a href="#" id="mujeres">Mujeres</a></li>
+                    <li><a href="#" id="hombres">Hombres</a></li>
+                    <li><a href="#" id="girls">Niña</a></li>
+                    <li><a href="#" id="boys">Niño</a></li>
                 </ul>
             </div>
             <div>
                 <ul class="list">
-                    <li><a href="#" onclick="openPages('Pages/nosotros.html','main-content')">Nosotros</a></li>
-                    <li><a href="#" onclick="openPages('Pages/ayuda.html','main-content')">Ayuda/PQR</a></li>
-                    <li><a href="#" onclick="openPages('Pages/carrito.html','main-content')" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
+                    <li><a href="#" id="nosotros">Nosotros</a></li>
+                    <li><a href="#" id="help">Ayuda/PQR</a></li>
+                    <li><a href="#" id="car" class="car"><span class="carrito">Carrito</span><img src="IMG/Carrito.svg" alt="carrito de compra"></a></li>
                 </ul>
             </div>
         </div>
@@ -92,9 +92,10 @@
         </div>
 
     </footer>
+    
 
 </body>
-<script src="JS/main.js" onload="openPages('Pages/home.html','main-content')"></script>
+<script src="JS/main.js" onload="openPages('Pages/home.html', 'main-content')"></script>
 
 
 </html>

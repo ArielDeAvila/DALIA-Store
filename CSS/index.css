@@ -1,11 +1,15 @@
 body {
     margin: 0px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .sing-in-up{
     position: absolute;
-    top: 12%;
+    top: 8%;
     right: 5%;
 
     color:rgb(215, 50, 99);
@@ -48,8 +52,8 @@ body {
     border-radius: 7px;
     overflow: hidden;
 
-    position: absolute;
-    top: 45%;
+    position: relative;
+    top: -150px;
 
 }
 
@@ -173,10 +177,10 @@ body {
 
 /*Diseño del contenido principal*/
 .Main-content {
-    position: absolute;
-    top: calc(45% + 47px);
-    left: 0px;
-    right: 0;
+    z-index: 2;
+
+    position: relative;
+    top: -150px;
 
     width: 100%;
     min-height: 500px;
@@ -357,7 +361,7 @@ body {
 
 @media screen and (max-width: 710px) {
     .Main-content {
-        top: 35%;
+        top: -200px;
     }
 }
 
@@ -442,12 +446,14 @@ body {
 
 /*Diseño del footer*/
 .footer {
-    position: absolute;
+    position: relative;
+    top: -200px;
+
     height: auto;
     width: 100%;
     background-color: #0a0a0a;
     color: #fff;
-    z-index: -1;
+    z-index: -15;
     font-family: 'Roboto', sans-serif;
     font-weight: 550;
     padding: 0 5%;
@@ -544,7 +550,7 @@ body {
 
 @media screen and (max-width:819px) {
     .footer {
-
+        top: -200px;
         display: grid;
         grid-template-rows: auto auto;
 
@@ -563,7 +569,14 @@ body {
 
 }
 
+@media screen and (max-width:710px){
+    .footer {
+        top: -250px;
+    }
+}
+
 @media screen and (max-width:445px){
+    
     .footer-subscribe form{
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -591,7 +604,7 @@ body {
 
 /*Diseño de Registro -----------------------*/
 .register{
-    margin: 7% 0 15% 0;
+    margin: 7% 0 0 0;
     width: 30%;
     max-width: 400px;
     min-width:  260px;
@@ -642,6 +655,10 @@ body {
     font-weight: bolder;
     font-size: 10pt;
     color: #757575;
+}
+
+.spacing-form{
+    height: 75px;
 }
 
 @media screen and (max-width: 866px){
