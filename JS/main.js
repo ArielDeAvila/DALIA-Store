@@ -1,14 +1,67 @@
-function openPages(url, contenedor,alter="") {
-    $.get(url, {}, function (data) {
-        $("#" + contenedor).html(data);
-    });
-
+function openPages(url, contenedor, alter = "") {
+    
     if (alter == "y") {
         document.getElementById("main-content").style.display = 'block';
     } else {
         document.getElementById("main-content").style.display = 'grid';
-    }
+    };
+
+    $.get(url, {}, function (data) {
+        $("#" + contenedor).html(data);
+    });
+
+}
+
+function pageProduct(item) {
+    window.scrollTo(0, 0);
+    openPages("../Pages/products.html", "main-content", "y");
     
+    let id = item.getAttribute("uid");
+
+    fetch(`https://fakestoreapi.com/products/${id}`)
+    .then(res => res.json())
+    .then(json => {
+        let page = document.getElementById("page-product");
+        page.innerHTML += `
+            <h1 class="title">${json.title}</h1>
+            <div class="image"><img src="${json.image}" alt="${json.title}"></div>
+            <div class="details-products">
+                <h1>$ ${json.price}</h1>
+                <p>Cantidad disponible: ${json.rating.count} unidades</p>
+                <button class="buy-button">Comprar ahora</button><br><br>
+                <button class="add-button">Agregar  <img src="../IMG/Carrito.svg" alt="agregar al carrito"></button>
+            </div>
+            <div class="about-product">
+                <label for="toggler">Sobre el producto</label>
+                <input type="checkbox" id="toggler">
+                <hr>
+                <p class="information">${json.description}</p>
+            </div>
+        `;
+    });
+    
+    let category = item.getAttribute("category");
+    
+    fetch(`https://fakestoreapi.com/products/category/${category}`)
+    .then(res => res.json())
+    .then(json => {
+        let similar = document.getElementById("similar")
+       
+        json.forEach(element => {
+            similar.innerHTML += `<product-component
+            title = "${element.title}"
+            description = "${element.description}" 
+            price = "${element.price}"
+            src = "${element.image}"
+            uid="${element.id}"
+            category = "${element.category}"
+            ></product-component>`
+        });
+
+        document.querySelectorAll("product-component").forEach(item => item.addEventListener('click', () => pageProduct(item)));
+
+    });
+
     
 }
 
@@ -25,8 +78,12 @@ function loadProducts(name) {
                 description = "${element.description}" 
                 price = "${element.price}"
                 src = "${element.image}"
+                uid="${element.id}"
+                category = "${element.category}"
                 ></product-component>`
         });
+
+        document.querySelectorAll("product-component").forEach(item => item.addEventListener('click',()=> pageProduct(item)));
 
     });
 
@@ -84,4 +141,7 @@ menuopen.addEventListener('click', menu_open);
 
 let menuclose = document.getElementById("menu-close");
 menuclose.addEventListener('click', menu_close);
+
+window.addEventListener('load', () => openPages('Pages/home.html', 'main-content'))
+
 

@@ -277,6 +277,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 11pt;
     box-shadow: 0px 0px 5px grey;
+    cursor: pointer;
 
     display: grid;
     grid-template-rows: 50% 35% 15%;

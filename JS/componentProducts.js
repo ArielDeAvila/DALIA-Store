@@ -12,7 +12,7 @@ class products extends HTMLElement{
         this.innerHTML = 
         `<div class="product">
             <div class="picture-product">
-                <img src="${this.src}" alt="producto" title="producto">
+                <img src="${this.src}" alt="producto" title="${this.title}">
             </div>
             <div class="details">
                 <strong>${this.title}</strong>
