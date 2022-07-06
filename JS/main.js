@@ -125,7 +125,7 @@ let nosotros = document.getElementById("nosotros");
 nosotros.addEventListener('click', () => openPages('Pages/nosotros.html', 'main-content'));
 
 let help = document.getElementById("help");
-help.addEventListener('click', () => openPages('Pages/ayuda.html', 'main-content'));
+help.addEventListener('click', () => openPages('Pages/ayuda.html', 'main-content','y'));
 
 let car = document.getElementById("car");
 car.addEventListener('click', () => openPages('Pages/carrito.html', 'main-content'));

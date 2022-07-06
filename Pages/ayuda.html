@@ -1,6 +1,38 @@
+<link rel="stylesheet" href="../CSS/ayuda.css">
 <body>
-    <h1>ayuda</h1>
-    <br><br><br><br><br><br><br>
+    <h1 class="title">Formulario de Peticiones, Quejas y Reclamos (PQR)</h1>
+    <form class="form-help">
+        <label for="opcion">Tipo de documento</label>
+        <select id="opcion" required >
+            <option value>--</option>
+            <option value="CC">CC</option>
+            <option value="CE">CE</option>
+        </select>
+        <label for="numberid">Numero de documento</label>
+        <input type="text" id="numberid" required>
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" required>
+        <label for="option-request">Tipo de solicitud</label>
+        <select name="" id="option-request" required>
+            <option value>--Ninguno--</option>
+            <option value="1">Petición</option>
+            <option value="2">Queja</option>
+            <option value="3">Sugerencia</option>
+            <option value="4">Reclamo</option>
+        </select>
+        <label for="description">Descripción del problema</label>
+        <textarea id="description" cols="30" rows="5"></textarea>
+        <br>
+        <input type="submit" value="enviar" class="button-send">
+        
+    </form>
+
+
+
+    <br><br><br><br><br><br>
+
+
+
 </body>
 <script>
     $(document).ready(function () {

@@ -1,0 +1,47 @@
+body{
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title{
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.form-help{
+    display: grid;
+    grid-template-columns: auto;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.form-help label{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.form-help input{
+    padding-top: 5px;
+}
+
+.form-help .button-send{
+    padding: 10px;
+    margin-bottom: 0%;
+    width: 70%;
+    margin-left: calc(50% - 140px);
+    color: #fff;
+    background-color: rgb(215, 50, 99);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
